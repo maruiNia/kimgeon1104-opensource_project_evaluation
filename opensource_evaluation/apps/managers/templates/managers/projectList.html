@@ -1,0 +1,9 @@
+{% if all_projects_list %}
+    <ul>
+        {% for question in all_projects_list %}
+            <li>{{ question }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No Projects are available.</p>
+{% endif %}
