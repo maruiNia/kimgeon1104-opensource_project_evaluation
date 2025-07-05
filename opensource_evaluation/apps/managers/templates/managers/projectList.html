@@ -16,4 +16,10 @@
     {% else %}
         <p>No Projects are available.</p>
     {% endif %}
+
+    <div style="margin-top: 30px;">
+        <form action="{% url 'managers:upload_view' %}" method="get">
+            <button type="submit">프로젝트 생성</button>
+        </form>
+    </div>
 </body>
