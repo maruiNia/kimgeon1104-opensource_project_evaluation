@@ -11,7 +11,7 @@ class Projects(models.Model) :
     
 class Projects_star(models.Model) :
     project_name = models.ForeignKey(Projects, on_delete=models.CASCADE)
-    projects_star = models.IntegerField(default=0)
+    projects_starpoint = models.IntegerField(default=0)
 
     def __str__(self):
         return f"{self.project_name} : {Projects_star}"
