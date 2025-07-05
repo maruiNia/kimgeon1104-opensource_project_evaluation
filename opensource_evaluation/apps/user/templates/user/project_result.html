@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<h2>프로젝트 평가 결과</h2>
+
+<p>프로젝트명: {{ project.project_name }}</p>
+<img src="{{ project.project_explain_image.url }}" alt="프로젝트 이미지" style="max-width: 300px;">
+
+<p>평가한 인원: {{ count }}명</p>
+<p>평균 별점: {{ avg }}점</p>
+
+<form action="{% url 'user:index' %}">
+    <button type="submit">프로젝트 목록으로 돌아가기</button>
+</form>

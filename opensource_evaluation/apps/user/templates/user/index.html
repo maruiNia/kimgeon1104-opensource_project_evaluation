@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <title>프로젝트 리스트</title>
+</head>
+<body>
+    <h1>프로젝트 이름</h1>
+    {% if list %}
+        <ul>
+            {% for project_name in list %}
+                <li>
+                    <strong> <a href="{% url 'user:project_detail' project_name %}">{{ project_name }}</a></strong>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No Projects are available.</p>
+    {% endif %}
+</body>

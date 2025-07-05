@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<img src="{{ project.project_explain_image.url }}" alt="프로젝트 설명" width="800">
+
+<form method="POST">
+    {% csrf_token %}
+    <p>별점 주기 (1~5):</p>
+    {% for i in "12345" %}
+        <label>
+            <input type="radio" name = "starpoint" value="{{ i }}">
+            {{ i }}점
+        </label>
+    {% endfor %}
+    <br><br>
+    <button type="submit">제출</button>
+</form>
